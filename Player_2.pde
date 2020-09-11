@@ -24,13 +24,4 @@ class Team2 extends Tank {
       super.shoot();
     }
   }
-  void shootcoll() {
-    if (bulletLoc.x > p1.location.x-20 && bulletLoc.x < p1.location.x+20 && bulletLoc.y > p1.location.y-10 && bulletLoc.y < p1.location.y+10) {
-      shooting = false;
-      p1.lives--;
-      if (p1.lives == 0) {
-        p1.explosion();
-      }
-    }
-  }
 }

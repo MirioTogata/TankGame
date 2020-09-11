@@ -4,10 +4,9 @@ class Tank {
   PVector velocity = new PVector();
   float theta = 0;
   float angleVel = 0.2;
-  PVector bulletLoc = new PVector();
-  PVector bulletVel = new PVector();
-  boolean shooting = false;
-  int lives = 1;
+  int lives = 3;
+  int dia = 30;
+  int bullettime;
 
   Tank(int x_, int y_, color col_) {
     location.set(x_, y_);
@@ -22,28 +21,23 @@ class Tank {
       translate(location.x, location.y);
       rotate(theta);
       rectMode(CENTER);
-      rect(0, 0, 40, 20);
-      rect(20, 0, 30, 5);
+      ellipse(0, 0, dia, dia);
+      rect(15, 0, dia, 5);
       popMatrix();
     }
-    if (shooting == true) {
-      bulletLoc.add(bulletVel.mult(2));
-      fill(150);
-      rect(bulletLoc.x, bulletLoc.y, 5, 5);
-      shootcoll();
-    }
   }
+
   void shoot() {
-    if (shooting == false) {
-      shooting = true;
-      bulletLoc.set(location.x, location.y);
-      bulletVel.set(velocity.x, velocity.y);
+    if (millis() - bullettime > 1000) {
+      bullets.add(new bullet(location, velocity));
+      bullettime = millis();
     }
   }
 
-  void shootcoll() {
-  }
-
-  void explosion() {
+  void hit() {
+    lives--;
+    if (lives == 0) {
+      //add 1 til explosion arraylist på locationen
+    }
   }
 }

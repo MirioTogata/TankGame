@@ -18,6 +18,7 @@ class Tank {
       velocity.set(5*cos(theta), 5*sin(theta));
       pushMatrix();
       noStroke();
+      fill(col);
       translate(location.x, location.y);
       rotate(theta);
       rectMode(CENTER);

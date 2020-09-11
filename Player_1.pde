@@ -4,11 +4,6 @@ class Team1 extends Tank {
     super(x_, y_, col_);
   }
 
-  void run() {
-    fill(col);
-    super.run();
-  }
-
   void collmove() {
     if (key == 'w') {
       if ((get((int)location.x+(int)velocity.x*9, (int)location.y+(int)velocity.y*9) == color(255))) {

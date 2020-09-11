@@ -17,7 +17,7 @@ class bullet {
   }
 
   void collision() {
-    if (get((int)location.x+(int)velocity.x, (int)location.y+(int)velocity.y) == color(0) || tankcoll()) {
+    if (get((int)location.x+(int)velocity.x, (int)location.y+(int)velocity.y) == color(1,1,1) || tankcoll()) {
       location.set(0, 2000); //iterator sletter den når den er udenfor skærmen
     }
   }

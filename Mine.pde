@@ -15,7 +15,7 @@ class Mine implements Runner {
 
   boolean remov() {
     if (millis() - timer > 4000) {
-      //inset small explosion with death radius
+      //insert small explosion with death radius
       return true;
     } else {
       return false;

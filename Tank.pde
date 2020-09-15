@@ -44,7 +44,8 @@ class Tank {
     lives--;
     if (lives == 0) {
       //add 1 til explosion arraylist på locationen
-    }
+      
+     }
   }
 
   void collmove() {

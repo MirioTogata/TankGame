@@ -4,6 +4,4 @@ class Team2 extends Tank {
     super(x_, y_, col_);
     keys = new char[]{'i', 'l', 'j', 'k', 'b','n'};
   }
-  
-  
 }

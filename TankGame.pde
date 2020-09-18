@@ -15,6 +15,7 @@ void draw() {
   image(playground, 0, 0);
   p1.run();
   p2.run();
+
   Iterator<Runner> Ite = runn.iterator();
   while (Ite.hasNext()) {
     Runner r = Ite.next();
@@ -26,15 +27,19 @@ void draw() {
   borderdeath();
 }
 
-void keyPressed() {
-  p1.collmove();
-  p2.collmove();
-}
-
 void borderdeath() {
   ringrad -= ringrad*0.0004;
   noFill();
   stroke(255, 0, 0);
   strokeWeight(20);
-  ellipse(width/2, height/2, ringrad*2, ringrad*2);
+  ellipse(500, 400, ringrad*2, ringrad*2);
+}
+
+void keyPressed() {
+  p1.keyPressedd();
+  p2.keyPressedd();
+}
+void keyReleased() {
+  p1.keyReleasedd();
+  p2.keyReleasedd();
 }

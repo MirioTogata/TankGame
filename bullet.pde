@@ -6,7 +6,7 @@ class bullet implements Runner {
 
   bullet(PVector loc_, PVector v) {
     location = loc_.copy();
-    velocity = (v.copy());
+    velocity = v.copy();
     location.add((velocity.copy()).mult(8));
   }
 

@@ -10,12 +10,13 @@ class Mine implements Runner {
   void run() {
     rectMode(CENTER);
     fill(160, 82, 45);
+    noStroke();
     rect(location.x, location.y, 5, 5);
   }
 
   boolean remov() {
     if (millis() - timer > 4000) {
-      //inset small explosion with death radius
+      //runn.add(new Explosion(location.copy() , 20));
       return true;
     } else {
       return false;

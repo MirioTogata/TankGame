@@ -76,6 +76,7 @@ class Tank {
     if (keypress[5]) {
       if (dead == false && millis() - minetime > 1000) {
         runn.add(new Mine(location));
+        minetime = millis();
       }
     }
   }

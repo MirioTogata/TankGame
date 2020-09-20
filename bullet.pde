@@ -6,7 +6,7 @@ class bullet implements Runner {
 
   bullet(PVector loc_, PVector v) {
     location = loc_.copy();
-    velocity = v.copy();
+    velocity = (v.copy().mult(2));
     location.add((velocity.copy()).mult(8));
   }
 
@@ -33,8 +33,9 @@ class bullet implements Runner {
       p2.hit();
       location.set(0, 2000); //iterator sletter den når den er udenfor skærmen
     }
-
+  
     if (ricochet == false) {
+      
       int colorCodeX = get((int)location.x+(int)velocity.x, (int)location.y);
       int colorCodeY = get((int)location.x, (int)location.y+(int)velocity.y);
       if (colorCodeX == color(0)) {
